@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@mantine/core/styles.css";
+import VecAppShell from "@/components/VecAppShell";
 
 import { MantineProvider, createTheme } from "@mantine/core";
 
@@ -11,7 +12,9 @@ const theme = createTheme({
 export default function App({ Component, pageProps }) {
   return (
     <MantineProvider theme={theme}>
-      <Component {...pageProps} />
+      <VecAppShell>
+        <Component {...pageProps} />
+      </VecAppShell>
     </MantineProvider>
   );
 }
